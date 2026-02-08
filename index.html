@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Real Strategy Map Engine - تسجيل الدخول</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+  </head>
+<body>
+
+    <!-- شاشة التحميل -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">جاري تحميل بيانات اللعبة...</div>
+    </div>
+
+    <div class="login-container">
+        <div class="login-header">
+            <h1><i class="fas fa-globe-africa"></i> استراتيجية العالم الحقيقي</h1>
+            <p>اختر دولتك من بين 197 دولة حول العالم وابدأ رحلتك نحو السيطرة العالمية.</p>
+        </div>
+
+        <div class="login-content">
+            <!-- نموذج تسجيل الدخول -->
+            <div class="login-box">
+                <form class="login-form" id="login-form">
+                    <div class="form-group">
+                        <label for="player-name"><i class="fas fa-user"></i> اسم اللاعب</label>
+                        <input type="text" id="player-name" class="form-input" placeholder="أدخل اسم اللاعب (مثال: LGND_علي)" required minlength="3" maxlength="20">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="player-email"><i class="fas fa-envelope"></i> البريد الإلكتروني (اختياري)</label>
+                        <input type="email" id="player-email" class="form-input" placeholder="email@example.com">
+                        <small style="color: #95a5a6; font-size: 12px; margin-top: 5px;">يستخدم لاستعادة البيانات فقط</small>
+                    </div>
+
+                    <div class="countries-selection">
+                        <h3><i class="fas fa-flag"></i> اختر دولتك الرئيسية</h3>
+                        
+                        <!-- فلاتر البحث -->
+                        <div class="filter-controls">
+                            <div class="search-box">
+                                <input type="text" id="country-search" class="search-input" placeholder="ابحث عن دولة...">
+                            </div>
+                        </div>
+                        
+                        <!-- أقسام القارات -->
+                        <div class="continent-tabs" id="continent-tabs">
+                            <!-- سيتم ملؤها ديناميكياً -->
+                        </div>
+                        
+                        <!-- شبكة الدول -->
+                        <div class="countries-grid" id="countries-grid">
+                            <!-- سيتم ملؤها بالدول -->
+                        </div>
+                    </div>
+
+                    <div id="error-message" class="error-message"></div>
+                    <div id="success-message" class="success-message"></div>
+
+                    <button type="submit" class="login-btn" id="login-btn">
+                        <i class="fas fa-play"></i> بدء اللعبة
+                    </button>
+                </form>
+
+                <div class="players-stats">
+                    <h3><i class="fas fa-chart-bar"></i> إحصائيات اللعبة</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value" id="total-players">0</div>
+                            <div class="stat-label">إجمالي اللاعبين</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="total-countries">197</div>
+                            <div class="stat-label">إجمالي الدول</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="occupied-countries">0</div>
+                            <div class="stat-label">الدول المحتلة</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="free-countries">197</div>
+                            <div class="stat-label">الدول الحرة</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instructions">
+                    <p><i class="fas fa-info-circle"></i> اختر أي دولة حرة للبدء. الدول المحتلة لا يمكن اختيارها. يمكنك البحث والتصفية حسب القارة.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+
+<body>
+  
+ 
+  <script src="main.js"></script>
+</body>
+</html>
